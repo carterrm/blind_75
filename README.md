@@ -1,1 +1,1 @@
-
+These solutions are for my personal use only. Each solution is only pushed to this repo once Leetcode accepts it, so you're welcome to use them for study if you wish. However, a better (and far more comprehensive) study tool is the channel Neetcode on YouTube- find their channel [here])(https://www.youtube.com/@NeetCode).
