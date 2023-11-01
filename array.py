@@ -73,7 +73,7 @@ def three_sum(nums):
         results.append(list(tuple))
     return results
 
-    # Chat GPT's solution:
+    # Chat GPT's solution- much faster:
     # if len(nums) < 3:
     #         return []
     #
