@@ -29,6 +29,22 @@ def contains_duplicate(nums):
             check_set.add(number)
     return False
 
+def product_except_self(nums):
+    results = []
+    #First, set prefixes
+    for i in range (0, len(nums)):
+        if i == 0:
+            results.append(1)
+        else:
+            results.append(results[i - 1] * nums[i - 1])
+    #define initial postfix & iterate through prefixes to calculate final values
+    current_postfix = 1
+    for i in range(len(nums) - 1, -1, -1):
+        results[i] *= current_postfix
+        current_postfix *= nums[i]
+    return results
+    three = 3
+
 def three_sum(nums):
     if len(nums) < 3:
         return []
