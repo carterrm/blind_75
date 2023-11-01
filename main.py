@@ -14,11 +14,12 @@ if __name__ == '__main__':
     #buy_sell_stock_result = buy_sell_stock([7,1,5,3,6,4])
     #contains_duplicate_result = contains_duplicate([1,2,3,4,1])
     #three_sum_result = three_sum([-2,0,1,1,2])
-    product_except_self_result = product_except_self([1,2,3,4])
+    #product_except_self_result = product_except_self([1,2,3,4])
 
     one = 1
     #TODO -- DYNAMIC PROGRAMMING PROBLEMS
-    climbing_stairs_result = climbing_stairs(5)
+    #climbing_stairs_result = climbing_stairs(5)
+    coin_change_result = coin_change([186,419,83,408], 6249)
     three = 3
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
