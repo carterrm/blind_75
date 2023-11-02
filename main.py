@@ -19,14 +19,21 @@ if __name__ == '__main__':
     #climbing_stairs_result = climbing_stairs(5)
     #coin_change_result = coin_change([186,419,83,408], 6249)
 
-    #TODO -- LINKED LIST PROBLEMS
-    node_5 = ListNode(5)
-    node_4 = ListNode(4,node_5)
-    node_3 = ListNode(3,node_4)
-    node_2 = ListNode(2,node_3)
-    node_1 = ListNode(1,node_2)
+    # TODO -- LINKED LIST PROBLEMS
 
-    reverse_linked_list_result = reverseList(node_1)
+    # node_5 = ListNode(5)
+    # node_4 = ListNode(4,node_5)
+    # node_3 = ListNode(3,node_4)
+    # node_2 = ListNode(2,node_3)
+    # node_1 = ListNode(1,node_2)
+    # reverse_linked_list_result = reverseList(node_1)
+
+    node_3 = ListNode(3, 4)
+    node_2 = ListNode(2, node_3)
+    node_1 = ListNode(1, node_2)
+    node_3.next = node_1
+
+    detect_cycle_result = detect_cycle(node_1)
     three = 3
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

@@ -9,21 +9,6 @@ class ListNode:
 
 
 
-# def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
-#     if head == None:
-#         return None
-#     if head.next == None:
-#         #Base case- this is the last node in your list. Return it to start going back up.
-#         return head
-#     else:
-#         new_head = reverseList(head.next)
-#         focus_node = new_head
-#         while focus_node.next != None:
-#             focus_node = focus_node.next
-#         focus_node.next = head
-#         focus_node.next.next = None
-#         return new_head
-
 def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
     if head is None or head.next is None:
         return head
@@ -37,3 +22,32 @@ def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
         prev = curr
         curr = next
     return prev
+
+# def detect_cycle(head):
+#     #This solution is fast (beats 72%), but uses a lot of memory (beats 5.7%).
+#     check_set = set()
+#     if head is None or head.next is None:
+#         return False
+#     while True:
+#         if head.next is None:
+#             return False
+#         elif head.next in check_set:
+#             return True
+#         else:
+#             check_set.add(head.next)
+#             head = head.next
+
+def detect_cycle(head):
+    #This solution is much faster, requiring only 3 more ms to run (still beats 53%) while using .5 mb less memory (beats 83%)
+    if head is None or head.next is None:
+        return False
+    slow = head
+    fast = head.next
+    while slow != fast:
+        if slow.next is None or fast.next is None:
+            return False
+        elif fast.next.next is None:
+            return False
+        slow = slow.next
+        fast = fast.next.next
+    return True
