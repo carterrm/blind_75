@@ -45,6 +45,19 @@ def product_except_self(nums):
     return results
     three = 3
 
+def maximum_subarray(nums):
+    max_sum = -100000
+    current_sum = 0
+    for num in nums:
+        if current_sum < 0:
+            current_sum = 0
+        current_sum += num
+        if current_sum > max_sum:
+            max_sum = current_sum
+
+    return max_sum
+
+
 def three_sum(nums):
     if len(nums) < 3:
         return []
