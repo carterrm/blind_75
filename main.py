@@ -29,12 +29,16 @@ if __name__ == '__main__':
     # node_1 = ListNode(1,node_2)
     # reverse_linked_list_result = reverseList(node_1)
 
-    node_3 = ListNode(3, 4)
+    node_3 = ListNode(4, None)
     node_2 = ListNode(2, node_3)
-    node_1 = ListNode(1, node_2)
-    node_3.next = node_1
+    node_1 = ListNode(0, node_2)
+
+    alt_node_3 = ListNode(5, None)
+    alt_node_2 = ListNode(3, alt_node_3)
+    alt_node_1 = ListNode(1, alt_node_2)
 
     #detect_cycle_result = detect_cycle(node_1)
+    mergeTwoLists_result = mergeTwoLists(node_1, alt_node_1)
 
     #TODO -- GRAPH PROBLEMS
 
@@ -49,7 +53,7 @@ if __name__ == '__main__':
     graph_node_3.neighbors = [graph_node_2, graph_node_4]
     graph_node_4.neighbors = [graph_node_1, graph_node_3]
 
-    clone_graph_result = clone_graph(graph_node_1)
+    #clone_graph_result = clone_graph(graph_node_1)
     three = 3
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
