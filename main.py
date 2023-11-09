@@ -22,23 +22,24 @@ if __name__ == '__main__':
 
     # TODO -- LINKED LIST PROBLEMS
 
-    # node_5 = ListNode(5)
-    # node_4 = ListNode(4,node_5)
-    # node_3 = ListNode(3,node_4)
-    # node_2 = ListNode(2,node_3)
-    # node_1 = ListNode(1,node_2)
-    # reverse_linked_list_result = reverseList(node_1)
+    node_5 = ListNode(5)
+    node_4 = ListNode(4,node_5)
+    node_3 = ListNode(3,node_4)
+    node_2 = ListNode(2)
+    node_1 = ListNode(1, node_2)
+    #reverse_linked_list_result = reverseList(node_1)
 
-    node_3 = ListNode(4, None)
-    node_2 = ListNode(2, node_3)
-    node_1 = ListNode(0, node_2)
-
-    alt_node_3 = ListNode(5, None)
-    alt_node_2 = ListNode(3, alt_node_3)
-    alt_node_1 = ListNode(1, alt_node_2)
+    # node_3 = ListNode(4, None)
+    # node_2 = ListNode(2, node_3)
+    # node_1 = ListNode(0, node_2)
+    #
+    # alt_node_3 = ListNode(5, None)
+    # alt_node_2 = ListNode(3, alt_node_3)
+    # alt_node_1 = ListNode(1, alt_node_2)
 
     #detect_cycle_result = detect_cycle(node_1)
-    mergeTwoLists_result = mergeTwoLists(node_1, alt_node_1)
+    #mergeTwoLists_result = mergeTwoLists(node_1, alt_node_1)
+    removeNthFromEndResult = removeNthFromEnd(node_1, 2)
 
     #TODO -- GRAPH PROBLEMS
 

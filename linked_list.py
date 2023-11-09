@@ -78,3 +78,29 @@ def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optio
             list2 = list2.next
         current = current.next
     return merged_head
+
+def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:
+    #Beats 40.97% on runtime, 94.80% on memory usage
+    if head.next is None:
+        return None
+    count = 0
+    temp = head
+    while temp != None:
+        temp = temp.next
+        count += 1
+
+    if n == count:
+        return head.next
+
+    temp = head
+    rear = None
+    front = None
+    for i in range(1, count - n):
+        temp = temp.next
+
+    rear = temp
+    front = temp.next
+    if front is not None:
+        front = front.next
+    rear.next = front
+    return head
