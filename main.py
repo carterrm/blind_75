@@ -3,6 +3,7 @@ import array
 from array import *
 from dynamic_programming import *
 from linked_list import *
+from graph import *
 
 # Just to be clear, TODOs are only labeled as such so the font shows up in a different color. Nothing is actually still left to do.
 if __name__ == '__main__':
@@ -33,7 +34,22 @@ if __name__ == '__main__':
     node_1 = ListNode(1, node_2)
     node_3.next = node_1
 
-    detect_cycle_result = detect_cycle(node_1)
+    #detect_cycle_result = detect_cycle(node_1)
+
+    #TODO -- GRAPH PROBLEMS
+
+    adj_list = []
+    graph_node_1 = graph_node(1)
+    graph_node_2 = graph_node(2)
+    graph_node_3 = graph_node(3)
+    graph_node_4 = graph_node(4)
+    graph_node_5 = graph_node(5)
+    graph_node_1.neighbors = [graph_node_2, graph_node_4]
+    graph_node_2.neighbors = [graph_node_1, graph_node_3]
+    graph_node_3.neighbors = [graph_node_2, graph_node_4]
+    graph_node_4.neighbors = [graph_node_1, graph_node_3]
+
+    clone_graph_result = clone_graph(graph_node_1)
     three = 3
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
