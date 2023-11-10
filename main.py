@@ -4,6 +4,7 @@ from array import *
 from dynamic_programming import *
 from linked_list import *
 from graph import *
+from binary import *
 
 # Just to be clear, TODOs are only labeled as such so the font shows up in a different color. Nothing is actually still left to do.
 if __name__ == '__main__':
@@ -13,8 +14,11 @@ if __name__ == '__main__':
     #contains_duplicate_result = contains_duplicate([1,2,3,4,1])
     #product_except_self_result = product_except_self([1,2,3,4])
     #maximum_subarray_result = maximum_subarray([-2,1,-3,4,-1,2,1,-5,4])
-    maximum_product_subarray_result = maximum_product_subarray([2,-5,-2,-4,3])
+    #maximum_product_subarray_result = maximum_product_subarray([2,-5,-2,-4,3])
     #three_sum_result = three_sum([-2,0,1,1,2])
+
+    #TODO -- BINARY PROBLEMS
+    number_of_1_bits_result = number_of_1_bits(9)
 
     one = 1
     #TODO -- DYNAMIC PROGRAMMING PROBLEMS
