@@ -18,7 +18,8 @@ if __name__ == '__main__':
     #three_sum_result = three_sum([-2,0,1,1,2])
 
     #TODO -- BINARY PROBLEMS
-    number_of_1_bits_result = number_of_1_bits(9)
+    #number_of_1_bits_result = number_of_1_bits(9)
+    counting_bits_result = counting_bits(9)
 
     one = 1
     #TODO -- DYNAMIC PROGRAMMING PROBLEMS
