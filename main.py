@@ -5,6 +5,7 @@ from dynamic_programming import *
 from linked_list import *
 from graph import *
 from binary import *
+from tree import *
 
 # Just to be clear, TODOs are only labeled as such so the font shows up in a different color. Nothing is actually still left to do.
 if __name__ == '__main__':
@@ -19,7 +20,7 @@ if __name__ == '__main__':
 
     #TODO -- BINARY PROBLEMS
     #number_of_1_bits_result = number_of_1_bits(9)
-    counting_bits_result = counting_bits(9)
+    #counting_bits_result = counting_bits(9)
 
     one = 1
     #TODO -- DYNAMIC PROGRAMMING PROBLEMS
@@ -45,7 +46,7 @@ if __name__ == '__main__':
 
     #detect_cycle_result = detect_cycle(node_1)
     #mergeTwoLists_result = mergeTwoLists(node_1, alt_node_1)
-    removeNthFromEndResult = removeNthFromEnd(node_1, 2)
+    #removeNthFromEndResult = removeNthFromEnd(node_1, 2)
 
     #TODO -- GRAPH PROBLEMS
 
@@ -63,4 +64,18 @@ if __name__ == '__main__':
     #clone_graph_result = clone_graph(graph_node_1)
     three = 3
 
+    #TODO -- TREE PROBLEMS
+    tree_node_5 = TreeNode(7, None, None)
+    tree_node_4 = TreeNode(15, None, None)
+    #tree_node_3 = TreeNode(20, tree_node_4, tree_node_5)
+    tree_node_3 = TreeNode(20, None, None)
+    tree_node_2 = TreeNode(9, None, None)
+    tree_node_1 = TreeNode(3, tree_node_2, tree_node_3)
+
+    other_tree_node_3 = TreeNode(20, None, None)
+    other_tree_node_2 = TreeNode(9, None, None)
+    other_tree_node_1 = TreeNode(3, tree_node_2, tree_node_3)
+
+    #max_tree_depth_result = max_tree_depth(tree_node_1)
+    same_tree_result = same_tree(tree_node_1, other_tree_node_1)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
