@@ -6,6 +6,7 @@ from linked_list import *
 from graph import *
 from binary import *
 from tree import *
+from string_problems import *
 
 # Just to be clear, TODOs are only labeled as such so the font shows up in a different color. Nothing is actually still left to do.
 if __name__ == '__main__':
@@ -29,11 +30,11 @@ if __name__ == '__main__':
 
     # TODO -- LINKED LIST PROBLEMS
 
-    node_5 = ListNode(5)
-    node_4 = ListNode(4,node_5)
-    node_3 = ListNode(3,node_4)
-    node_2 = ListNode(2)
-    node_1 = ListNode(1, node_2)
+    # node_5 = ListNode(5)
+    # node_4 = ListNode(4,node_5)
+    # node_3 = ListNode(3,node_4)
+    # node_2 = ListNode(2)
+    # node_1 = ListNode(1, node_2)
     #reverse_linked_list_result = reverseList(node_1)
 
     # node_3 = ListNode(4, None)
@@ -50,33 +51,35 @@ if __name__ == '__main__':
 
     #TODO -- GRAPH PROBLEMS
 
-    adj_list = []
-    graph_node_1 = graph_node(1)
-    graph_node_2 = graph_node(2)
-    graph_node_3 = graph_node(3)
-    graph_node_4 = graph_node(4)
-    graph_node_5 = graph_node(5)
-    graph_node_1.neighbors = [graph_node_2, graph_node_4]
-    graph_node_2.neighbors = [graph_node_1, graph_node_3]
-    graph_node_3.neighbors = [graph_node_2, graph_node_4]
-    graph_node_4.neighbors = [graph_node_1, graph_node_3]
+    # adj_list = []
+    # graph_node_1 = graph_node(1)
+    # graph_node_2 = graph_node(2)
+    # graph_node_3 = graph_node(3)
+    # graph_node_4 = graph_node(4)
+    # graph_node_5 = graph_node(5)
+    # graph_node_1.neighbors = [graph_node_2, graph_node_4]
+    # graph_node_2.neighbors = [graph_node_1, graph_node_3]
+    # graph_node_3.neighbors = [graph_node_2, graph_node_4]
+    # graph_node_4.neighbors = [graph_node_1, graph_node_3]
 
     #clone_graph_result = clone_graph(graph_node_1)
-    three = 3
+
+    #TODO -- STRING PROBLEMS
+    valid_anagram_result = valid_anagram("anagram", "nagamarf")
 
     #TODO -- TREE PROBLEMS
-    tree_node_5 = TreeNode(7, None, None)
-    tree_node_4 = TreeNode(15, None, None)
-    #tree_node_3 = TreeNode(20, tree_node_4, tree_node_5)
-    tree_node_3 = TreeNode(20, None, None)
-    tree_node_2 = TreeNode(9, None, None)
-    tree_node_1 = TreeNode(3, tree_node_2, tree_node_3)
+    # tree_node_5 = TreeNode(7, None, None)
+    # tree_node_4 = TreeNode(15, None, None)
+    # tree_node_3 = TreeNode(20, tree_node_4, tree_node_5)
+    # tree_node_3 = TreeNode(20, None, None)
+    # tree_node_2 = TreeNode(9, None, None)
+    # tree_node_1 = TreeNode(3, tree_node_2, tree_node_3)
 
-    other_tree_node_3 = TreeNode(20, None, None)
-    other_tree_node_2 = TreeNode(9, None, None)
-    other_tree_node_1 = TreeNode(3, tree_node_2, tree_node_3)
+    # other_tree_node_3 = TreeNode(20, None, None)
+    # other_tree_node_2 = TreeNode(9, None, None)
+    # other_tree_node_1 = TreeNode(3, tree_node_2, tree_node_3)
 
     #max_tree_depth_result = max_tree_depth(tree_node_1)
     #same_tree_result = same_tree(tree_node_1, other_tree_node_1)
-    invert_tree_result = invert_tree(tree_node_1)
+    #invert_tree_result = invert_tree(tree_node_1)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
