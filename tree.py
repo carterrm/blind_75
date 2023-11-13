@@ -1,4 +1,4 @@
-
+from collections import deque
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -30,3 +30,30 @@ def same_tree(p: TreeNode, q: TreeNode) -> bool:
     else:
         return False
 
+def invert_tree(root:TreeNode) -> TreeNode:
+    #Top approach is DFS- since it doesn't require use of a queue, it's faster & better on memory (90.63% runtime, 69.88% memory)
+    if root is None or (root.left is None and root.right is None):
+        return root
+    else:
+        invert_tree(root.left)
+        invert_tree(root.right)
+    temp = root.left
+    root.left = root.right
+    root.right = temp
+    return root
+    #Bottom approach is BFS, which is slower & worse on memory.
+
+    # if root is None:
+    #     return None
+    # bfs = deque()
+    # bfs.append(root)
+    # while len(bfs) != 0:
+    #     current = bfs.popleft()
+    #     if current.left is not None:
+    #         bfs.append(current.left)
+    #     if current.right is not None:
+    #         bfs.append(current.right)
+    #     temp = current.left
+    #     current.left = current.right
+    #     current.right = temp
+    # return root

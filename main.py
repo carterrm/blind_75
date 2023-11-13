@@ -77,5 +77,6 @@ if __name__ == '__main__':
     other_tree_node_1 = TreeNode(3, tree_node_2, tree_node_3)
 
     #max_tree_depth_result = max_tree_depth(tree_node_1)
-    same_tree_result = same_tree(tree_node_1, other_tree_node_1)
+    #same_tree_result = same_tree(tree_node_1, other_tree_node_1)
+    invert_tree_result = invert_tree(tree_node_1)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
