@@ -43,6 +43,7 @@ if __name__ == '__main__':
     # graph_node_4.neighbors = [graph_node_1, graph_node_3]
 
     #clone_graph_result = clone_graph(graph_node_1)
+    course_schedule_result = course_schedule(2, [[0, 1], [1, 0]])
 
     # TODO -- LINKED LIST PROBLEMS
 
@@ -66,9 +67,9 @@ if __name__ == '__main__':
     # removeNthFromEndResult = removeNthFromEnd(node_1, 2)
 
     #TODO -- MATRIX PROBLEMS
-    four_matrix = [[11,12,13,14],[15,16,17,18],[19,20,21,22], [23,24,25,26]]
-    three_matrix = [[1,2,3],[4,5,6],[7,8,9]]
-    rotate_image_result = rotate_image([[1]])
+    #four_matrix = [[11,12,13,14],[15,16,17,18],[19,20,21,22], [23,24,25,26]]
+    #three_matrix = [[1,2,3],[4,5,6],[7,8,9]]
+    #rotate_image_result = rotate_image([[1]])
 
     #TODO -- STRING PROBLEMS
     #valid_anagram_result = valid_anagram("anagram", "nagamarf")
