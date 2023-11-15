@@ -66,7 +66,9 @@ if __name__ == '__main__':
     # removeNthFromEndResult = removeNthFromEnd(node_1, 2)
 
     #TODO -- MATRIX PROBLEMS
-    rotate_image_result = rotate_image([[1,2,3],[4,5,6],[7,8,9]])
+    four_matrix = [[11,12,13,14],[15,16,17,18],[19,20,21,22], [23,24,25,26]]
+    three_matrix = [[1,2,3],[4,5,6],[7,8,9]]
+    rotate_image_result = rotate_image([[1]])
 
     #TODO -- STRING PROBLEMS
     #valid_anagram_result = valid_anagram("anagram", "nagamarf")
