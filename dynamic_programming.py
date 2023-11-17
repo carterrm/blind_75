@@ -26,3 +26,17 @@ def coin_change(coins, amount):
             table[i] = -1
     return table[amount]
     # Faster than 97% of users, less memory than 99% of users on Leetcode
+
+def longest_increasing_subsequence(nums:list[int]) -> int:
+    #Beats 69.27% on runtime, 36.72% on memory
+    result_array = [0] * (len(nums))
+    result_array[len(nums) - 1] = 1
+    for i in range(len(nums) - 2,-1, -1):
+        intermediate_set = []
+        intermediate_set.append(1)
+        for j in range(i + 1, len(nums)):
+            if(nums[j] > nums[i]):
+                intermediate_set.append(result_array[j] + 1)
+        result_array[i] = max(intermediate_set)
+    return max(result_array)
+

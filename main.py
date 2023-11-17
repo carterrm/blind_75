@@ -28,6 +28,7 @@ if __name__ == '__main__':
     #TODO -- DYNAMIC PROGRAMMING PROBLEMS
     #climbing_stairs_result = climbing_stairs(5)
     #coin_change_result = coin_change([186,419,83,408], 6249)
+    longest_increasing_subsequence_result = longest_increasing_subsequence([10,9,2,5,3,7,101,18])
 
     #TODO -- GRAPH PROBLEMS
 
@@ -43,7 +44,7 @@ if __name__ == '__main__':
     # graph_node_4.neighbors = [graph_node_1, graph_node_3]
 
     #clone_graph_result = clone_graph(graph_node_1)
-    course_schedule_result = course_schedule(2, [[0, 1], [1, 0]])
+    #course_schedule_result = course_schedule(2, [[0, 1], [1, 0]])
 
     # TODO -- LINKED LIST PROBLEMS
 
