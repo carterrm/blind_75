@@ -28,7 +28,7 @@ if __name__ == '__main__':
     #TODO -- DYNAMIC PROGRAMMING PROBLEMS
     #climbing_stairs_result = climbing_stairs(5)
     #coin_change_result = coin_change([186,419,83,408], 6249)
-    longest_increasing_subsequence_result = longest_increasing_subsequence([10,9,2,5,3,7,101,18])
+    #longest_increasing_subsequence_result = longest_increasing_subsequence([10,9,2,5,3,7,101,18])
 
     #TODO -- GRAPH PROBLEMS
 
@@ -76,6 +76,8 @@ if __name__ == '__main__':
     #valid_anagram_result = valid_anagram("anagram", "nagamarf")
     #valid_parentheses_result = valid_parentheses("(")
     #valid_palindrome_result = valid_palindrome("A man, a plan, a canal: Panama")
+    palindromic_substrings_result = palindromic_substrings("aaab")
+    three = 3
 
     #TODO -- TREE PROBLEMS
     # tree_node_5 = TreeNode(7, None, None)

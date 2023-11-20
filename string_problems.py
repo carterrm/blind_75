@@ -55,3 +55,27 @@ def valid_palindrome(s) -> bool:
         j += 1
     return True
 
+def palindromic_substrings(s:str) -> int:
+    #Beat 58.11% on runtime, 33.77% on memory usage.
+
+    left = 0
+    right = 0
+    num_palindromes = len(s)
+    for i in range(0, len(s)):
+        left = i - 1
+        right = i + 1
+        def loop(left, right, num_palindromes):
+            while left >= 0 and right < len(s):
+                if s[left] == s[right]:
+                    num_palindromes += 1
+                    left -= 1
+                    right += 1
+                else:
+                    break
+            return num_palindromes
+        num_palindromes = loop(left, right, num_palindromes)
+        left = i
+        right = i + 1
+        if left >= 0 and right < len(s) and s[left] == s[right]:
+            num_palindromes = loop(left, right, num_palindromes)
+    return num_palindromes
