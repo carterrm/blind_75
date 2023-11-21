@@ -18,6 +18,7 @@ if __name__ == '__main__':
     #product_except_self_result = product_except_self([1,2,3,4])
     #maximum_subarray_result = maximum_subarray([-2,1,-3,4,-1,2,1,-5,4])
     #maximum_product_subarray_result = maximum_product_subarray([2,-5,-2,-4,3])
+    search_rotated_array_result = search_rotated_array([3,1], 1)
     #three_sum_result = three_sum([-2,0,1,1,2])
 
     #TODO -- BINARY PROBLEMS
@@ -76,7 +77,8 @@ if __name__ == '__main__':
     #valid_anagram_result = valid_anagram("anagram", "nagamarf")
     #valid_parentheses_result = valid_parentheses("(")
     #valid_palindrome_result = valid_palindrome("A man, a plan, a canal: Panama")
-    palindromic_substrings_result = palindromic_substrings("aaab")
+    #palindromic_substrings_result = palindromic_substrings("aaab")
+    #longest_palindromic_substring_result = longest_palindromic_substring("cbbd")
     three = 3
 
     #TODO -- TREE PROBLEMS

@@ -129,6 +129,35 @@ def maximum_product_subarray(nums):
             return front_product
         else: return rear_product
 
+def search_rotated_array(nums:list[int], target:int) -> int:
+    #Beats 82.84% on runtime, 74.05% on memory
+    left = 0
+    right = len(nums) - 1
+    center = 0
+    #While number is not found:
+    while left <= right:
+        center = (right + left) // 2
+        if nums[center] == target:
+            return center
+
+        if nums[left] <= nums[center]:
+            if target < nums[left] or target > nums[center]:
+                left = center + 1
+            else:
+                right = center - 1
+        else:
+            if target > nums[right] or target < nums[center]:
+                right = center - 1
+            else:
+                left = center + 1
+    return -1
+
+    example = [11,12,13,0,1,2,3,4,5,6,7,8,9]
+
+
+
+
+
 def three_sum(nums):
     if len(nums) < 3:
         return []
@@ -205,3 +234,4 @@ def two_sum_II(input_array, target):
         elif sum > target:
             rear_pointer -= 1
     return [front_pointer, rear_pointer]
+
