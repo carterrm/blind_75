@@ -55,9 +55,43 @@ def valid_palindrome(s) -> bool:
         j += 1
     return True
 
+def longest_palindromic_substring(s:str) -> str:
+    #Runs surprisingly quickly for how much code there is. Beats 60.98% on runtime and 49.19% on memory.
+    #structurally identical to palindromic_substrings() below
+    max_length = 0 if (s is None or s == "") else 1
+    result = "" if (s is None or s == "") else s[0]
+    left = 0
+    right = 0
+    for i in range(0, len(s)):
+        left = i - 1
+        right = i + 1
+        def loop(left, right):
+            loop_length = max_length
+            loop_string = result
+            while left >= 0 and right < len(s):
+                if s[left] == s[right]:
+                    # num_palindromes += 1
+                    if (right - left) + 1 > loop_length:
+                        loop_length = (right - left) + 1
+                        loop_string = s[left:(right + 1)]
+                    left -= 1
+                    right += 1
+
+                else:
+                    break
+            return loop_length, loop_string
+
+        loop_result = loop(left, right)
+        max_length, result = loop_result[0], loop_result[1]
+        left = i
+        right = i + 1
+        if left >= 0 and right < len(s) and s[left] == s[right]:
+            loop_result = loop(left, right)
+            max_length, result = loop_result[0], loop_result[1]
+    return result
+
 def palindromic_substrings(s:str) -> int:
     #Beat 58.11% on runtime, 33.77% on memory usage.
-
     left = 0
     right = 0
     num_palindromes = len(s)
