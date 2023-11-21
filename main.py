@@ -31,8 +31,7 @@ if __name__ == '__main__':
     #coin_change_result = coin_change([186,419,83,408], 6249)
     #longest_increasing_subsequence_result = longest_increasing_subsequence([10,9,2,5,3,7,101,18])
     #longest_common_subsequence_result = longest_common_subsequence('oxcpqrsvwf', 'shmtulqrypy')
-    longest_common_subsequence_result = longest_common_subsequence('abcde', 'ace')
-    three = 3
+    #longest_common_subsequence_result = longest_common_subsequence('abcde', 'ace')
 
     #TODO -- GRAPH PROBLEMS
 
@@ -85,12 +84,11 @@ if __name__ == '__main__':
     three = 3
 
     #TODO -- TREE PROBLEMS
-    # tree_node_5 = TreeNode(7, None, None)
-    # tree_node_4 = TreeNode(15, None, None)
-    # tree_node_3 = TreeNode(20, tree_node_4, tree_node_5)
-    # tree_node_3 = TreeNode(20, None, None)
-    # tree_node_2 = TreeNode(9, None, None)
-    # tree_node_1 = TreeNode(3, tree_node_2, tree_node_3)
+    tree_node_5 = TreeNode(7, None, None)
+    tree_node_4 = TreeNode(3, None, None)
+    tree_node_3 = TreeNode(6, tree_node_4, tree_node_5)
+    tree_node_2 = TreeNode(4, None, None)
+    tree_node_1 = TreeNode(5, tree_node_2, tree_node_3)
 
     # other_tree_node_3 = TreeNode(20, None, None)
     # other_tree_node_2 = TreeNode(9, None, None)
@@ -99,4 +97,5 @@ if __name__ == '__main__':
     #max_tree_depth_result = max_tree_depth(tree_node_1)
     #same_tree_result = same_tree(tree_node_1, other_tree_node_1)
     #invert_tree_result = invert_tree(tree_node_1)
+    validate_binary_tree_result = validate_binary_tree(tree_node_1)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
