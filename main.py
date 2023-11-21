@@ -18,7 +18,7 @@ if __name__ == '__main__':
     #product_except_self_result = product_except_self([1,2,3,4])
     #maximum_subarray_result = maximum_subarray([-2,1,-3,4,-1,2,1,-5,4])
     #maximum_product_subarray_result = maximum_product_subarray([2,-5,-2,-4,3])
-    search_rotated_array_result = search_rotated_array([3,1], 1)
+    #search_rotated_array_result = search_rotated_array([3,1], 1)
     #three_sum_result = three_sum([-2,0,1,1,2])
 
     #TODO -- BINARY PROBLEMS
@@ -30,6 +30,9 @@ if __name__ == '__main__':
     #climbing_stairs_result = climbing_stairs(5)
     #coin_change_result = coin_change([186,419,83,408], 6249)
     #longest_increasing_subsequence_result = longest_increasing_subsequence([10,9,2,5,3,7,101,18])
+    #longest_common_subsequence_result = longest_common_subsequence('oxcpqrsvwf', 'shmtulqrypy')
+    longest_common_subsequence_result = longest_common_subsequence('abcde', 'ace')
+    three = 3
 
     #TODO -- GRAPH PROBLEMS
 
