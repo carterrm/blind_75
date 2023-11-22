@@ -1,4 +1,5 @@
 # Definition for singly-linked list.
+import math
 from typing import Optional
 
 
@@ -85,7 +86,7 @@ def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:
         return None
     count = 0
     temp = head
-    while temp != None:
+    while temp is not None:
         temp = temp.next
         count += 1
 
@@ -104,3 +105,59 @@ def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:
         front = front.next
     rear.next = front
     return head
+
+def reorder_list(head) -> None:
+    #Not fast (5.02%), but good on memory (65.71%)!
+    #Edge cases
+    if head.next is None:
+        return head
+    #Add nodes to list
+    temp = head
+    node_list = []
+    while temp is not None:
+        node_list.append(temp)
+        temp = temp.next
+    #Now we have the full list of nodes
+    list_size = len(node_list)
+    for i in range (1, list_size, 2):
+        if i % 2 == 1:
+            #node_list[ list_size - 1] is to be inserted at i * 2 - 1 len(node_list) - i
+            node_list.insert((i),node_list[list_size - 1])
+            node_list.pop()
+            #Make the swap in the linked list
+            node_list[i - 1].next = node_list[i]
+            if i < list_size - 1:
+                node_list[i].next = node_list[i + 1]
+            node_list[list_size - 1].next = None
+
+    #No extra space solution: Usually pretty good on runtime & memory, but occasionally super sucky on both.
+    # head_copy = head
+    # fast = head
+    # slow = head
+    # if head.next is None:
+    #     return head
+    # while fast.next is not None:
+    #     fast = fast.next
+    #     if fast is not None and fast.next is not None:
+    #         fast = fast.next
+    #         slow = slow.next
+    #
+    #
+    # #Slow is now at the end of the first half of the list
+    # second = slow.next
+    # prev = slow.next = None
+    # while second is not None:
+    #     temp = second.next
+    #     second.next = prev
+    #     prev = second
+    #     second = temp
+    #
+    # first, second = head, prev
+    #
+    # while second is not None:
+    #     temp_1, temp_2 = first.next, second.next
+    #     first.next = second
+    #     second.next = temp_1
+    #     first, second = temp_1, temp_2
+    #     second = temp_2
+
