@@ -220,6 +220,47 @@ def three_sum(nums):
     #
     #     return results
 
+
+def container_with_most_water(height: list[int]) -> int:
+    #Beats 98.79% on runtime, 19.17% on memory
+    if len(height) == 2:
+        return min(height[0], height[1])
+    def calculate_area():
+            return min(height[right], height[left]) * (right - left)
+
+    left = 0
+    right = len(height) - 1
+    max_area = calculate_area()
+    while left < right:
+        if height[left] <= height[right]:
+            #move left
+            interim_left = left
+            while height[left] >= height[interim_left] and interim_left < right:
+                interim_left += 1
+                #Update left when you've found a higher left boundary
+            left = interim_left
+            max_area = max(max_area, calculate_area())
+        else:
+            #move right
+            interim_right = right
+            while height[right] >= height[interim_right] and left < interim_right:
+                interim_right -= 1
+            right = interim_right
+            max_area = max(max_area, calculate_area())
+    return max_area
+
+
+        # current_area = min(height[right], height[left]) * (left - right)
+        # if current_area > max_area:
+        #     max_area = current_area
+
+
+    #
+
+
+
+
+
 def two_sum_II(input_array, target):
     front_pointer = 0
     rear_pointer = len(input_array) - 1
