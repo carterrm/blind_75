@@ -53,4 +53,28 @@ def longest_common_subsequence(text1:str, text2:str) -> int:
     return grid[0][0]
 
 
+def word_break(s:str, wordDict: list[str]) -> bool:
+    #Beats 81.15% on runtime, 67.15% on memory
+
+    results = [False] * (len(s) + 1)
+    results[len(s)] = True
+    for i in range(len(s) - 1, -1, -1):
+        for word in wordDict:
+            is_match = True
+            for j in range(0, len(word)):
+                if j + i > len(s) - 1:
+                    is_match = False
+                    break
+                else:
+                    if word[j] != s[i + j]:
+                        is_match = False
+                        break
+                    else:
+                        continue
+            if is_match:
+                results[i] = results[i + len(word)]
+                if results[i]:
+                    break
+    return results[0]
+
 

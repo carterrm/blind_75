@@ -33,7 +33,7 @@ if __name__ == '__main__':
     #longest_increasing_subsequence_result = longest_increasing_subsequence([10,9,2,5,3,7,101,18])
     #longest_common_subsequence_result = longest_common_subsequence('oxcpqrsvwf', 'shmtulqrypy')
     #longest_common_subsequence_result = longest_common_subsequence('abcde', 'ace')
-    word_break_result = word_break("catsandog", ["cats","dog","sand","and","cat"])
+    word_break_result = word_break("cars", ["car", "ca", "rs"])
 
     #TODO -- GRAPH PROBLEMS
 
