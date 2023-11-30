@@ -152,10 +152,32 @@ def search_rotated_array(nums:list[int], target:int) -> int:
                 left = center + 1
     return -1
 
-    example = [11,12,13,0,1,2,3,4,5,6,7,8,9]
+    #example = [11,12,13,0,1,2,3,4,5,6,7,8,9]
 
 
+def find_minimum_in_rotated_sorted_array(nums: list[int]) -> int:
+    #Beats 89.68% on runtime, 58.21% on memory
+    if len(nums) == 1:
+        return nums[0]
+    left = 0
+    right = len(nums) - 1
+    if nums[left] < nums[right]:
+        return nums[left]
 
+    while left < right:
+        center = (right + left) // 2
+        if nums[center] > nums[right]:
+            #You're in the left-hand half of the array
+            left = center + 1
+        elif nums[center] < nums[right]:
+            #you're in the right-hand half
+            if nums[center - 1] < nums[center]:
+                #you're in the right-hand half of the right-hand half
+                right = center
+            else:
+                return nums[center]
+    if left == right:
+        return nums[left]
 
 
 def three_sum(nums):
@@ -248,16 +270,6 @@ def container_with_most_water(height: list[int]) -> int:
             right = interim_right
             max_area = max(max_area, calculate_area())
     return max_area
-
-
-        # current_area = min(height[right], height[left]) * (left - right)
-        # if current_area > max_area:
-        #     max_area = current_area
-
-
-    #
-
-
 
 
 

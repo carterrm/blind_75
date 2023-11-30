@@ -19,8 +19,9 @@ if __name__ == '__main__':
     #maximum_subarray_result = maximum_subarray([-2,1,-3,4,-1,2,1,-5,4])
     #maximum_product_subarray_result = maximum_product_subarray([2,-5,-2,-4,3])
     #search_rotated_array_result = search_rotated_array([3,1], 1)
+    #minimum_rotated_array_result = find_minimum_in_rotated_sorted_array([4,5,6,7,0,1,2])
     #three_sum_result = three_sum([-2,0,1,1,2])
-    most_water_result = container_with_most_water([1,8,6,2,5,4,8,3,7])
+    #most_water_result = container_with_most_water([1,8,6,2,5,4,8,3,7])
 
     #TODO -- BINARY PROBLEMS
     #number_of_1_bits_result = number_of_1_bits(9)
@@ -32,6 +33,7 @@ if __name__ == '__main__':
     #longest_increasing_subsequence_result = longest_increasing_subsequence([10,9,2,5,3,7,101,18])
     #longest_common_subsequence_result = longest_common_subsequence('oxcpqrsvwf', 'shmtulqrypy')
     #longest_common_subsequence_result = longest_common_subsequence('abcde', 'ace')
+    word_break_result = word_break("catsandog", ["cats","dog","sand","and","cat"])
 
     #TODO -- GRAPH PROBLEMS
 
